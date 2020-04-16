@@ -82,7 +82,7 @@ _Para salir y guardar los cambios hechos en este documento de debe precionar pri
 
 
 
-## Despliegue del CLuster con terraform 🖇️
+## Despliegue del Cluster con terraform 🖇️
 
 _Despues de haber modificado los archivos anteriores, debemos digitar el siguiente comando:_
 
