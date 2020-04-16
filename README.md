@@ -1,9 +1,51 @@
-# IKS on Classic Cluster 
 
-This module creates an IKS on classic cluster with worker pools in any number of zones.
+# Desplegar Cluster de Kubernetes desde Terraform
+
+_Esta guia es un paso a  paso del despliegue de un Cluster de Kubernetes en IBM Cloud desde CLI, utilizando terraform._
+
+## Arquitectura
 
 <img width="262" alt="iks" src="https://user-images.githubusercontent.com/60987042/79510157-7174ee80-8002-11ea-9548-e7f6d243f0ea.PNG">
 ---
+
+## Comenzando 🚀
+
+_Para iniciar con el despliegue es necesario que hagamos un pull de la imagen Docker provista por ibm en la cual se encuantran las diferentes plantillas y configuracion para el despliegue del cluster._
+
+_El pull de esta imagen docker se puede hacer utilizando el siguiente comando:_
+
+    
+    docker pull ibmterraform/terraform-provider-ibm-docker
+    
+    
+_Despues de haber hecho el pull de la imagen, debemos verificar que se a agregado correctamente la imagen y esta verificación se hace mediente el siguinete comando:_
+
+    
+    docker images
+    
+
+_Ahora debemos ingresar en esta imagen que acabamos de subir para desde ahi realizar el despliegue, Para ingresar a la imagen debemos ingresar el siguiente comando:_
+
+    
+    docker run -it ibmterraform/terraform-provider-ibm-docker:latest /bin/bash
+    
+    
+## Despliegue 📦
+
+_Apenas ingresemos a la imagen debe aparecer al inicio de la linea de comandos lo siguiente:_
+
+    Bash-4.4#
+    
+_Ahora debemos clonar el repositorio de GitHub, y esto se hace mediante el siguiente comando:_
+
+    git clone https://github.com/emeloibmco/Schematics-Classic-Infrastructure-IKS.git
+    
+_Al tener clonado el repositorio, debemos ingresar a este preyecto y lo hacemos mediante el siguiente comando:_
+
+    cd Schematics-Classic-Infrastructure-IKS
+ 
+## Ahora debemos modificar los diferentes archivos que encontramos aqui 🛠️
+
 
 ### Table of Contents
 1. [Cluster](##cluster)
