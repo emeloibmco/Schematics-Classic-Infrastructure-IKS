@@ -2,7 +2,7 @@
 
 This module creates an IKS on classic cluster with worker pools in any number of zones.
 
-![Classic Cluster](./.docs/classic_cluster.png)
+<img width="262" alt="iks" src="https://user-images.githubusercontent.com/60987042/79510157-7174ee80-8002-11ea-9548-e7f6d243f0ea.PNG">
 ---
 
 ### Table of Contents
