@@ -3,6 +3,13 @@
 
 _Esta guia es un paso a  paso del despliegue de un Cluster de Kubernetes en IBM Cloud desde CLI, utilizando terraform._
 
+### Table of Contents
+1. [Cluster](##cluster)
+2. [Module Variables](##Module-Variables)
+3. [Outputs](##Outputs) (optional)
+4. [As a Module in a Larger Architecture](##As-a-Module-in-a-Larger-Architecture)
+
+
 ## Arquitectura
 
 <img width="262" alt="iks" src="https://user-images.githubusercontent.com/60987042/79510157-7174ee80-8002-11ea-9548-e7f6d243f0ea.PNG">
@@ -44,22 +51,15 @@ _Al tener clonado el repositorio, debemos ingresar a este preyecto y lo hacemos 
 
     cd Schematics-Classic-Infrastructure-IKS
  
-## Ahora debemos modificar los diferentes archivos que encontramos aqui 🛠️
+## Ahora debemos modificar el archivo "variables.tf" 🛠️
 
+_Para poder entrar a editar este archivo debemos ingresar el siguinete comando:_
 
-### Table of Contents
-1. [Cluster](##cluster)
-2. [Module Variables](##Module-Variables)
-3. [Outputs](##Outputs) (optional)
-4. [As a Module in a Larger Architecture](##As-a-Module-in-a-Larger-Architecture)
+    vi variables.tf
+    
+_Apenas ingresemos al archivo debemos precionar la tecla **i** del teclado, al hacer esto se nos habilitara la edición del archivo._
 
----
-## Cluster
-
-This module creates an IKS cluster, it will also optionall provision workers in multiple zones from a list. 
-
----
-## Module Variables
+_Los campos que debemos modificar de este archivos son:_
 
 Variable | Type | Description | Default
 ---------|------|-------------|--------
@@ -75,41 +75,61 @@ Variable | Type | Description | Default
 `machine_type` | String | hardware type for cluster | `b2c.4x16`
 `private_only` | Boolean | Provision cluster workers on private only | `false`
 ---
-
-## Outputs
-
-- `cluster_id` : Cluster ID, will await the worker pool zone attachments before outputting
-
+    
+    
+_Para salir y guardar los cambios hechos en este documento de debe precionar primero la tecla **esc** y luego digitar **:wq!** y por ultimo dar enter._ 
 ---
-## As a Module in a Larger Architecture
 
-Using Default Variables
 
-```
-module classic_cluster {
-    source            = "<path to your code>"
-    resource_group_id = "<path to your code>"
-    public_vlan_ids   = "<path to your code>" 
-    private_vlan_ids  = "<path to your code>" 
-    zones             = "<path to your code>" 
-    cluster_name      = "<path to your code>" 
-}
-```
+## Despliegue del CLuster con terraform 🖇️
 
-Using All Custom Variables
+_Despues de haber modificado los archivos anteriores, debemos digitar el siguiente comando:_
 
-```
-module classic_cluster {
-    source            = "<path to your code>"
-    resource_group_id = "<path to your code>"
-    public_vlan_ids   = "<path to your code>" 
-    private_vlan_ids  = "<path to your code>" 
-    zones             = "<path to your code>" 
-    cluster_name      = "<path to your code>" 
-    kube_version      = "<path to your code>" 
-    default_pool_size = "<path to your code>" 
-    hardware          = "<path to your code>" 
-    machine_type      = "<path to your code>" 
-    private_only      = "<path to your code>" 
-}
-```
+    terraform init
+
+_Apenas termine de ejecutarse el comando anterior, debemos digitar el siguiente comando:_
+
+    terraform plan
+    
+_En el comando anterior se va a demorar un poco ya que esta contruyendo el plano para el despliegue. Al termiar de ejecutar este comando se debe digitar el siguiente:_
+
+    terraform apply
+    
+_Al ejecutar el comando anterior, despues de unos segundos nos va a parecer una pregunta en la cual debemos contestar **yes**, y aca estamos dando la autorización de crear el cluster de OpenShift en IBM Cloud._
+
+
+
+### Pre-requisitos 📋
+
+_Para el correcto funcionameniento de este despliegue en IBM Cloud son necesarios los siguinetes programas:_
+
+* _Docker:_
+
+    ```
+    sudo apt install docker-ce
+    ```
+
+* _Ansible:_
+    ```
+    pip install "ansible>=2.8.0"
+    ```
+_Ademas debemos crear desde la pagina de IBM Cloud los siguientes recursos:_
+
+* 1 Api_key de IBM Cloud.
+* 1 Api_key para infraestructura clasica.
+* 1 Vlan publica.
+* 1 Vlan privada.
+
+
+### Enlaces Guia y Similares 📖
+
+* https://github.com/IBM-Cloud/terraform-ibm-openshift
+* https://github.com/Cloud-Schematics/classic-cluster
+
+## Autor ✒️
+
+* **Jhoiner Smith Rojas González** -  - jhoinerrojas@ibm.com
+_Equipo IBM Cloud Tech Sales Colombia._
+
+
+
