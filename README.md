@@ -64,17 +64,17 @@ _Los campos que debemos modificar de este archivos son:_
 
 Variable | Type | Description | Default
 ---------|------|-------------|--------
-`ibmcloud_api_key` | String | IBM Cloud IAM API Key |
-`resource_group` | String | Name of resource group to provision resources |
-`ibm_region` | String | IBM Cloud region where all resources will be deployed | `us-south`
-`public_vlan_ids` | List | List of public vlans. The first will be for the master, any additional will be for worker pools. This is optional if you use `private_only` |
-`private_vlan_ids` | List | List of private vlans The first will be for the master, any additional will be for worker pools |
-`zones` | List | List of cluster zones The first will be for the master, any additional will be for worker pools. The zones must be in te same order as te VLAN Ids |
-`cluster_name` | String | Name of openshift cluster to be created | `classic-cluster`
-`default_pool_size` | String | Default pool size for cluster | `1`
-`hardware` | String | Hardware type for cluster, shared or dedicated | `shared`
-`machine_type` | String | hardware type for cluster | `b2c.4x16`
-`private_only` | Boolean | Provision cluster workers on private only | `false`
+`ibmcloud_api_key` | String | API Key de IBM Cloud |
+`resource_group` | String | Nombre del Grupo de Recursos  |
+`ibm_region` | String |  Region donde se quieren desplegar los recursos de IBM Cloud | `us-south`
+`public_vlan_ids` | List | Lista de vlans públicas. El primero será para el master, cualquier adicional será para grupos de trabajadores(Esto es opcional si usa).  `private_only` |
+`private_vlan_ids` | List | Lista de vlans privadas. La primera será para el master, cualquier adicional será para grupos de trabajadores |
+`zones` | List | Lista de zonas de localización del clúster. La primera será para el master, cualquier adicional será para grupos de trabajadores. Las zonas deben estar en el mismo orden que los ID de VLAN |
+`cluster_name` | String | Nombre del cluster que queremos crear | `classic-cluster`
+`default_pool_size` | String | Numero de Nodos que se quieren en el cluster | `1`
+`hardware` | String | Tipo de hardware para clúster, shared o dedicated | `shared`
+`machine_type` | String | Tipo de hardware para clúster | `b2c.4x16`
+`private_only` | Boolean | Provisión de trabajadores de clúster solo en privado | `false`
 ---
     
     
