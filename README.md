@@ -7,7 +7,7 @@ _Esta guia es un paso a  paso del despliegue de un Cluster de Kubernetes en IBM 
 1. [Arquitectura](##Arquitectura)
 2. [Inicio](##Comenzando)
 3. [Aprovicionamiento del Despliegue](##Despliegue) (optional)
-4. [Despliegue del CLuster con terraform](##Despliegue del CLuster con terraform)   Pre-requisitos
+4. [Despliegue del CLuster con terraform](##Despliegue del CLuster con terraform)   
 5. [Pre-requisitos](##Pre-requisitos)
 
 
