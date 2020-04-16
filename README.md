@@ -78,7 +78,7 @@ Variable | Type | Description | Default
     
     
 _Para salir y guardar los cambios hechos en este documento de debe precionar primero la tecla **esc** y luego digitar **:wq!** y por ultimo dar enter._ 
----
+
 
 
 ## Despliegue del CLuster con terraform 🖇️
@@ -119,12 +119,6 @@ _Ademas debemos crear desde la pagina de IBM Cloud los siguientes recursos:_
 * 1 Api_key para infraestructura clasica.
 * 1 Vlan publica.
 * 1 Vlan privada.
-
-
-### Enlaces Guia y Similares 📖
-
-* https://github.com/IBM-Cloud/terraform-ibm-openshift
-* https://github.com/Cloud-Schematics/classic-cluster
 
 ## Autor ✒️
 
