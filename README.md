@@ -3,13 +3,6 @@
 
 _Esta guia es un paso a  paso del despliegue de un Cluster de Kubernetes en IBM Cloud desde CLI, utilizando terraform._
 
-### Tabla de contenido
-1. [Arquitectura](##arquitectura).
-2. [Inicio](##comenzando).
-3. [Aprovicionamiento del Despliegue](##despliegue).
-4. [Despliegue del cluster con Terraform](##despliegue-del-cLuster-con-terraform).
-5. [Pre-requisitos](###pre-requisitos).
-
 
 ## Arquitectura
 
@@ -62,7 +55,7 @@ _Apenas ingresemos al archivo debemos precionar la tecla **i** del teclado, al h
 
 _Los campos que debemos modificar de este archivos son:_
 
-Variable | Type | Description | Default
+Variable | Tipo | Descripción | Por Defecto
 ---------|------|-------------|--------
 `ibmcloud_api_key` | String | API Key de IBM Cloud |
 `resource_group` | String | Nombre del Grupo de Recursos  |
