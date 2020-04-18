@@ -16,7 +16,7 @@ provider ibm {
 ##############################################################################
 
 data ibm_resource_group resource_group {
-  resource_group_id = "6764d0853c60419180ba88daafce32c4"
+  
   name = "${var.resource_group}"
 }
 
