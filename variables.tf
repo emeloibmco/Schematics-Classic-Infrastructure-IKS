@@ -8,7 +8,7 @@ variable ibmcloud_api_key {
 }
 
 variable resource_group {
-    default = "6764d0853c60419180ba88daafce32c4"
+    default = "landing-zone"
 }
 
 variable ibm_region {
