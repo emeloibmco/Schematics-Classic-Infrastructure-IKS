@@ -4,10 +4,11 @@
 
 variable ibmcloud_api_key {
     description = "IBM Cloud IAM API Key"
+    default = "8FynCmLa_2Xy0NXCWU1W6b3gMeeGDjW7ibLCPfBs5Tcy"
 }
 
 variable resource_group {
-    description = "Name of resource group to provision resources"
+    default = "6764d0853c60419180ba88daafce32c4"
 }
 
 variable ibm_region {
