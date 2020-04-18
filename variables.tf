@@ -4,7 +4,7 @@
 
 variable ibmcloud_api_key {
     description = "IBM Cloud IAM API Key"
-    default = "2406d36c-10ee-4dba-868f-a95dc37c0b36"
+    default = "crn:v1:bluemix:public:kms:us-south:a/d756a6aef0ed4d18ad43aa70cfef033d:d5a52477-5ce8-47f1-99fe-ebd689c22001:key:06f926a6-4c43-4ebd-843a-b923d8fdd5cc"
 }
 
 variable resource_group {
