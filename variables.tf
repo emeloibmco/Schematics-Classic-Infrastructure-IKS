@@ -36,7 +36,7 @@ variable private_vlan_ids {
 
 variable zones {
   description = "List of cluster zones The first will be for the master, any additional will be for worker pools"
-  default     = "dal13"
+  default     = "us-south"
 
 }
 
