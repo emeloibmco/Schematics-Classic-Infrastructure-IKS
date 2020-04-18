@@ -25,12 +25,12 @@ variable ibm_region {
 ##############################################################################
 
 variable public_vlan_ids {
-  default     = "1504"
+  default     = "2851976"
 
 }
 
 variable private_vlan_ids {
-  default     = "3272"
+  default     = "2851978"
 }
 
 
