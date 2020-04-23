@@ -1,4 +1,3 @@
-
 # Desplegar Cluster de Kubernetes desde Terraform
 
 _Esta guia es un paso a  paso del despliegue de un Cluster de Kubernetes en IBM Cloud desde CLI, utilizando terraform._
